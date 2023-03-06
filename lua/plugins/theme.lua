@@ -1,20 +1,21 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
+    "rebelot/kanagawa.nvim",
     config = function()
-      local theme = require("catppuccin")
+      local theme = require("kanagawa")
 
       theme.setup({
-        color_overrides = {
-          mocha = {
-            base = "#1e1e1e",
+        keywordStyle = { italic = false },
+        statementStyle = { bold = false },
+        transparent = true,
+        colors = {
+          palette = {
+            sumiInk4 = "#1e1e1e",
           },
         },
       })
 
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd("colorscheme kanagawa")
     end,
   },
 }
